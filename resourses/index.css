@@ -1,0 +1,11 @@
+/* BODY */
+
+body {
+    background-color: #EDEDED;
+    max-width: 950px;
+    margin: auto;
+}
+
+body header embed {
+    width: 950px;
+}

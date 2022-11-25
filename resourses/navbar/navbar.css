@@ -1,0 +1,14 @@
+body {
+    background-color: pink;
+}
+
+p {
+    font-size: 30px;
+    font-family: "Brush Script MT", cursive;
+    display: inline-block;
+}
+
+img {
+    width: 50px;
+    display: inline-block;
+}
