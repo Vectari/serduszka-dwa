@@ -9,11 +9,39 @@
     <link rel="stylesheet" href="./resourses/index.css">
 </head>
 <body>
-    <header>
-        <embed type="text/html" src="./resourses/navbar/navbar.html">    
-    </header>
+    <nav>
+        <p>Serduszka Dwa</p>
+        <img src="./resourses/images/favicon.png" alt="serduszka dwa logo">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbutton">MENU</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="./index.html">Strona Główna</a>
+              <a href="./resourses/price-list/price-list.html">Cennik</a>
+              <a href="./resourses/contact/contact.html">Kontakt</a>
+            </div>
+        </div>
+
+    </nav>
     <main>
-        <h2>test</h2>
+
     </main>
+    <script>
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbutton')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
 </body>
 </html>
