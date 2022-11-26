@@ -11,20 +11,83 @@
 </head>
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="#" class="active">Serduszka Dwa</a>
-        <a href="#">Cennik</a>
-        <a href="#">Kontakt</a>
+        <a href="#" class="active" id="logo-text">Serduszka Dwa<img src="./resourses/images/favicon.png" alt="logo"></a>
+        <a href="#" class="inactive">Cennik</a>
+        <a href="#" class="inactive">Kontakt</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
     </div>
       
-    <div style="padding-left:16px">
-        <h2>Responsive Topnav Example</h2>
-        <p>Resize the browser window to see how it works.</p>
-    </div>
-      
+    <main>
+        <!--  ----- INFO SECTION ----- -->
+        <div class="info-one">
+            <img src="./resourses/images/coupleinshadow.jpg" class="img-one" alt="couple in shadow">
+            <div class="text-one"><p>Biuro Serduszka Dwa zaprasza osoby samotne, poszukujące wymarzonego partnera życiowego, przyjaciółki/przyjaciela lub poprostu, kogoś z kim wspólnie można można wyjść na kawę lub pojechać na wspólne wakacje. Biuro posiada foto-oferty osób w wieku od 24 lat do 84 lat.</p></div>
+        </div>
+        <div class="info-two">
+            <div class="text-two"><p>Nie zamieszczamy wizerunku klientów w internecie. Biuro Serduszka Dwa zamieszcza swoje reklamy głównie w dwóch województwach: kujawsko-pomorskie i pomorskie, ale jesteśmy otwarci na każdą osobę która chciałby skorzystać z usług biura, niezależnie od lokalizacji.</p></div>
+            <img src="./resourses/images/couple-hike.jpg" class="img-two" alt="couple hike">
+        </div>
+        <div class="info-three">
+            <p>Od samego początku Biuro obrało sobie za cel indywidualne podejście do każdego klienta. Tempo życia, ogrom możliwości i sposobów na poznanie kogoś nowego może powodować nie tylko frustracje, ale też niejednokrotnie niemiłe doświadczenia. Właśnie dlatego Biuro Serduszka Dwa wychodzi frontem do klienta stawiając na jakość, ale nie tylko świadczonych usług, a co najważniejsze, dobrze dobranych kandydatów i kandydatki.</p>
+        </div>
+
+        <!--  ----- RECOMMENDATION SECTION -----  -->
+        <div class="reco">
+            <div class="reco-paper">
+                <p>Biuro Serduszka Dwa w prasie</p>
+                <img src="./resourses/images/13.jpg" class="reco-paper-img" alt="recommendations in papers">
+            </div>
+            <p class="reco-customers">Zadowoleni klienci</p>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 10</div>
+                        <img src="./resourses/images/12 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 10</div>
+                        <img src="./resourses/images/14 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 10</div>
+                        <img src="./resourses/images/15 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 10</div>
+                        <img src="./resourses/images/16 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 10</div>
+                        <img src="./resourses/images/17 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 10</div>
+                        <img src="./resourses/images/18 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 10</div>
+                        <img src="./resourses/images/19 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">8 / 10</div>
+                        <img src="./resourses/images/2 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">9 / 10</div>
+                        <img src="./resourses/images/4 - list.jpg" style="width:100%">
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">10 / 10</div>
+                        <img src="./resourses/images/10 - list.jpg" style="width:100%">
+                    </div>
+                </div>
+        </div>
+    </main>
     <script>
+        
+        // NAVBAR FUNCTION -----
+
         function myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
@@ -33,6 +96,24 @@
                 x.className = "topnav";
             }
         }
+
+        // SLIDESHOW FUNCTION -----
+
+            let slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 5000); // Change image every 5 seconds
+            }
     </script>
 </body>
 </html>
+
