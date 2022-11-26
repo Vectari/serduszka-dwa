@@ -31,22 +31,34 @@ span {
 header {
     display: flex;
     justify-content: center;
+    margin-top: -20px;
+    margin-bottom: -20px;
 }
 
 header p {
     display: inline-block;
-    font-size: 50px;
+    font-size: 35px;
     font-family: 'Great Vibes', cursive;
     vertical-align: middle;
 }
 
 header img {
     display: inline-block;
-    width: 15%;
+    max-width: 110px;
+    height: auto;
     vertical-align: middle;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
+@media screen and (min-width: 500px) {
+    header p {
+        font-size: 50px;
+    }
+    header img {
+        max-width: 140px;
+        padding-left: 20px;
+    }
+}
 
 /* ----- NAVBAR ----- */
 
