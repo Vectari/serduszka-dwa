@@ -6,41 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serduszka Dwa - Biuro Matrymonialne i Partnerskie</title>
     <link rel="icon" href="./resourses/images/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./resourses/index.css">
 </head>
 <body>
-    <nav>
-        <p>Serduszka Dwa</p>
-        <img src="./resourses/images/favicon.png" alt="serduszka dwa logo">
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbutton">MENU</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="./index.html">Strona Główna</a>
-              <a href="./resourses/price-list/price-list.html">Cennik</a>
-              <a href="./resourses/contact/contact.html">Kontakt</a>
-            </div>
-        </div>
-
-    </nav>
-    <main>
-
-    </main>
+    <div class="topnav" id="myTopnav">
+        <a href="#" class="active">Serduszka Dwa</a>
+        <a href="#">Cennik</a>
+        <a href="#">Kontakt</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+      
+    <div style="padding-left:16px">
+        <h2>Responsive Topnav Example</h2>
+        <p>Resize the browser window to see how it works.</p>
+    </div>
+      
     <script>
         function myFunction() {
-          document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        window.onclick = function(event) {
-          if (!event.target.matches('.dropbutton')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-              }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
             }
-          }
         }
     </script>
 </body>
