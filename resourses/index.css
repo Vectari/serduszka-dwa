@@ -110,7 +110,12 @@ header img {
 }
   
 @media screen and (max-width: 500px) {
-    .topnav.responsive {position: relative;}
+    .topnav.responsive {
+        position: relative;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    }
     .topnav.responsive .icon {
       position: absolute;
       right: 0;
