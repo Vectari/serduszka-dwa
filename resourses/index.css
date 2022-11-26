@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 /* ----- BODY ----- */
 
 body {
     margin: 0;
     max-width: 1050px;
     margin: auto;
+    background-color: #ededed;
+    border-left: 1px solid rgba(0, 0, 0, 0.048);
+    border-right: 1px solid rgba(0, 0, 0, 0.048);
 }
 
 .img-one,
@@ -21,11 +26,33 @@ span {
     font-weight: bold;
 }
  
-/* ----- HEADER - NAVBAR ----- */
+/* ----- HEADER ----- */
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header p {
+    display: inline-block;
+    font-size: 50px;
+    font-family: 'Great Vibes', cursive;
+    vertical-align: middle;
+}
+
+header img {
+    display: inline-block;
+    width: 15%;
+    vertical-align: middle;
+    padding-left: 15px;
+}
+
+
+/* ----- NAVBAR ----- */
 
 .topnav {
     overflow: hidden;
-    background-color: rgb(105, 105, 105);
+    background-color: rgb(136, 133, 133);
 }
   
 .topnav a {
@@ -37,11 +64,6 @@ span {
     text-decoration: none;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-#logo-text {
-    font-size: 22px;
-    font-family: Luminari;
 }
 
 .topnav a img {
