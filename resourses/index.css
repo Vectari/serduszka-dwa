@@ -65,6 +65,9 @@ header img {
 .topnav {
     overflow: hidden;
     background-color: rgb(136, 133, 133);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
   
 .topnav a {
