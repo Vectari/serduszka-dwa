@@ -133,62 +133,37 @@ header img {
 
 /* INFO */
 
-.info-one {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main-info {
+    text-align: center;
 }
 
 .img-one {
-    padding: 10px;
-    width: 45%;
-    margin-right: 30px;
+    width: 95%;
+    margin-top: 5px;
 }
 
 .text-one {
+    width: 90%;
+    margin: auto;
     font-size: 21px;
-    max-width: 50%;
-    padding: 10px;
-}
-
-.info-two {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-two {
-    padding: 10px;
-    width: 45%;
-    margin-right: 30px;
 }
 
 .text-two {
+    width: 90%;
+    margin: 10px auto;
     font-size: 21px;
-    max-width: 50%;
-    padding: 10px;
-
 }
 
-.info-three {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
-    padding: 10px;
+.img-two {
+    width: 95%;
+    margin: 10px 0 15px 0;
 }
 
-
-/* .wrap {width: 85%; margin: auto; overflow: hidden;}
-.left {float: right; height: 510px; width: 49%; background: pink;}
-.right {float: left; height: 250px; margin-bottom: 10px; width: 49%;}
-.right.top {background: green;}
-.right.bot {background: red;}
-@media all and (max-width: 400px) {
-    .left, .right {float: none; margin-bottom: 5px; height: 200px;}
-} */
-
-
+.text-three {
+    width: 90%;
+    margin: auto;
+    font-size: 21px;
+}
 
 
 /* RECOMMENDATIONS */
