@@ -130,3 +130,8 @@ header img {
 
 /* ----- MAIN ----- */
 
+main {
+    font-size: 25px;
+    font-weight: bold;
+    width: 60%;
+}

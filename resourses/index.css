@@ -178,6 +178,19 @@ header img {
     padding: 10px;
 }
 
+
+/* .wrap {width: 85%; margin: auto; overflow: hidden;}
+.left {float: right; height: 510px; width: 49%; background: pink;}
+.right {float: left; height: 250px; margin-bottom: 10px; width: 49%;}
+.right.top {background: green;}
+.right.bot {background: red;}
+@media all and (max-width: 400px) {
+    .left, .right {float: none; margin-bottom: 5px; height: 200px;}
+} */
+
+
+
+
 /* RECOMMENDATIONS */
 
 .reco-paper p,
@@ -212,7 +225,7 @@ header img {
 /* Fading animation */
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
 }
   
 @keyframes fade {
