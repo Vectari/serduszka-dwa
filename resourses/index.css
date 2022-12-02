@@ -147,12 +147,14 @@ header img {
     width: 90%;
     margin: auto;
     font-size: 21px;
+    color: #353535;
 }
 
 .text-two {
     width: 90%;
     margin: 10px auto;
     font-size: 21px;
+    color: #353535;
 }
 
 .img-two {
@@ -164,6 +166,7 @@ header img {
     width: 90%;
     margin: auto;
     font-size: 21px;
+    color: #353535;
 }
 
 
@@ -173,6 +176,7 @@ header img {
 .reco-customers {
     font-size: 26px;
     font-weight: bold;
+    color: #353535;
 }
 
 .reco {

@@ -131,8 +131,36 @@ header img {
 
 /* ----- MAIN ----- */
 
-main {
-    font-size: 25px;
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price-img {
+    width: 40%;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.price-text {
+    width: 56%;
+    text-align: center;
+    color: #353535;
+}
+
+h3 span {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 500px) {
+    .price-text {
+        font-size: 22px;
+    }
+}
+
+.FAQ {
+    font-size: 26px;
     font-weight: bold;
-    width: 60%;
+    color: #353535;
+    text-align: center;
 }

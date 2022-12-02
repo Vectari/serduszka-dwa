@@ -140,10 +140,12 @@ main div {
 .big-text {
     font-size: 25px;
     font-weight: bold;
+    color: #353535;
 }
 
 .small-text {
     font-size: 21px;
+    color: #353535;
 }
 
 main div {
