@@ -69,6 +69,7 @@ header img {
     position: sticky;
     top: 0;
     z-index: 100;
+    border-radius: 0 0 10px 10px;
 }
   
 .topnav a {
@@ -94,7 +95,7 @@ header img {
 }
   
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #2dbeeb;
     color: white;
 }
   
@@ -139,7 +140,7 @@ header img {
 
 .img-one {
     width: 95%;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .text-one {
@@ -170,7 +171,7 @@ header img {
 
 .reco-paper p,
 .reco-customers {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
 }
 
