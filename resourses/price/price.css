@@ -68,6 +68,7 @@ header img {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    z-index: 100;
     border-radius: 0 0 10px 10px;
 }
   
@@ -158,9 +159,28 @@ h3 span {
     }
 }
 
+/* ----- FAQ SECTION ----- */
+
 .FAQ {
     font-size: 26px;
     font-weight: bold;
     color: #353535;
     text-align: center;
+}
+
+.q {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 22px;
+    color: #353535;
+    background: linear-gradient(225deg, transparent 0, transparent 50px, #f2f2f2 15%, #2dbeeb 100%);
+}
+
+.a {
+    width: 85%;
+    margin: 10px auto;
+    font-size: 19px;
+    color: #353535;
 }
