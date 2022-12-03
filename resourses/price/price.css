@@ -174,8 +174,9 @@ h3 span {
     margin-top: 20px;
     padding: 5px;
     font-size: 22px;
+    border-radius: 10px 0 0 10px;
     color: #353535;
-    background: linear-gradient(225deg, transparent 0, transparent 50px, #f2f2f2 15%, #2dbeeb 100%);
+    background: linear-gradient(225deg, #ededed 15%, #2dbeeb 100%);
 }
 
 .a {

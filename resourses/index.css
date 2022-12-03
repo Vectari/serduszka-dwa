@@ -145,7 +145,7 @@ header img {
 
 .text-one {
     width: 90%;
-    margin: auto;
+    margin: 15px auto;
     font-size: 21px;
     color: #353535;
 }
@@ -153,6 +153,18 @@ header img {
 .text-two {
     width: 90%;
     margin: 10px auto;
+    font-size: 21px;
+    color: #353535;
+}
+
+.text-how-head {
+    font-size: 26px;
+    font-weight: bold;
+    color: #353535;
+}
+
+.text-how {
+    list-style-position: inside;
     font-size: 21px;
     color: #353535;
 }
