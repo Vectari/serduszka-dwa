@@ -158,15 +158,27 @@ header img {
 }
 
 .text-how-head {
+    width: 90%;
+    margin: 10px auto 10px auto;
     font-size: 26px;
     font-weight: bold;
     color: #353535;
 }
 
 .text-how {
+    width: 90%;
+    margin: auto;
     list-style-position: inside;
     font-size: 21px;
     color: #353535;
+}
+
+.number {
+    font-size: 22px;
+    font-weight: bold;
+    background: linear-gradient(225deg, #ededed 15%, #2dbeeb 100%);
+    border-radius: 10px 0 0 10px;
+    padding: 2px; 
 }
 
 .img-two {
