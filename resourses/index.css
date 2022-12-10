@@ -95,8 +95,8 @@ header img {
 }
   
 .topnav a.active {
-    background-color: #2dbeeb;
-    color: white;
+    background-color: #C2E7FF;
+    color: #353535;
 }
   
 .topnav .icon {
@@ -176,7 +176,7 @@ header img {
 .number {
     font-size: 22px;
     font-weight: bold;
-    background: linear-gradient(225deg, #ededed 15%, #2dbeeb 100%);
+    background: linear-gradient(225deg, #ededed 15%, #C2E7FF 100%);
     border-radius: 10px 0 0 10px;
     padding: 2px; 
 }
