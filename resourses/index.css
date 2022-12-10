@@ -70,6 +70,7 @@ header img {
     top: 0;
     z-index: 100;
     border-radius: 0 0 10px 10px;
+    box-shadow: 1px 0 6px 1px #353535;
 }
   
 .topnav a {
@@ -141,6 +142,7 @@ header img {
 .img-one {
     width: 95%;
     margin-top: 10px;
+    
 }
 
 .text-one {
