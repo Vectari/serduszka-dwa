@@ -8,5 +8,5 @@
 
 ## What I learned in this project?
     > First of all CSS and JavaScript. I have much fun create this page with all features like 
-    > sticky droplist navbar whis is necessary for mobile users or optimizing everything for 
+    > sticky droplist navbar which is necessary for mobile users or optimizing everything for 
     > faster loading compared to the previous version.
