@@ -13,9 +13,16 @@ const StyledArticleHeader = styled.h2`
 const PriceList = () => {
   return (
     <>
-    <StyledArticleHeader id="pricelist">Cennik</StyledArticleHeader>
+      <StyledArticleHeader id="pricelist">Cennik</StyledArticleHeader>
+
+      {/* TODO
+    1. cennik i zdjęcie obok siebie
+    2. czeste pytania
+    3. kontakt
+    4. mail
+    5. mapka */}
     </>
-  )
-}
+  );
+};
 
 export default PriceList;

@@ -27,10 +27,6 @@ const StyledImg = styled.img`
   border-radius: 0.5rem;
 `;
 
-const StyledGallery = styled.dev`
-  width: 95%;
-`;
-
 const Rec = () => {
   const photos = [
     { src: `${photo1}`, width: 400, height: 300 },
@@ -52,9 +48,7 @@ const Rec = () => {
       </StyledArticleHeader>
       <StyledImg src={newspaper} alt="article in newspaper" />
       <StyledArticleHeader>Zadowoleni klienci</StyledArticleHeader>
-      <StyledGallery>
-        <PhotoAlbum layout="rows" photos={photos} />
-      </StyledGallery>
+      <PhotoAlbum layout="rows" photos={photos} />
     </>
   );
 };
