@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 // import { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
-import { BiBook } from "react-icons/bi";
-import { BiMessageDetail } from "react-icons/bi";
+import { MdOutlineArticle } from "react-icons/md";
+import { AiOutlineLike } from "react-icons/ai";
+import { PiHandCoinsDuotone } from "react-icons/pi";
 
 const StyledNav = styled.nav`
   background: rgba(0, 0, 0, 0.3);
@@ -47,13 +47,13 @@ const NavBar = () => {
         <AiOutlineHome />
       </StyledAnchor>
       <StyledAnchor href="#main">
-        <AiOutlineUser />
+        <MdOutlineArticle />
       </StyledAnchor>
       <StyledAnchor href="#rec">
-        <BiBook />
+        <AiOutlineLike />
       </StyledAnchor>
       <StyledAnchor href="#pricelist">
-        <BiMessageDetail />
+        <PiHandCoinsDuotone />
       </StyledAnchor>
     </StyledNav>
   );

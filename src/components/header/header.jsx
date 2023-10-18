@@ -6,6 +6,7 @@ const StyledTitle = styled.p`
   margin-bottom: 0.6rem;
   font-family: "Great Vibes";
   font-size: 2.1rem;
+  /* position: fixed; */
 `;
 
 const StyledImg = styled.img`
