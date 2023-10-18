@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { useState } from "react";
-import {AiOutlineHome} from 'react-icons/ai'
-import {AiOutlineUser} from 'react-icons/ai'
-import {BiBook} from 'react-icons/bi'
-import {BiMessageDetail} from 'react-icons/bi'
+// import { useState } from "react";
+import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineUser } from "react-icons/ai";
+import { BiBook } from "react-icons/bi";
+import { BiMessageDetail } from "react-icons/bi";
 
 const StyledNav = styled.nav`
   background: rgba(0, 0, 0, 0.3);
@@ -43,10 +43,18 @@ const NavBar = () => {
       <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}></a>
       <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}></a>
       <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}></a> */}
-      <StyledAnchor href="#"><AiOutlineHome /></StyledAnchor>
-      <StyledAnchor href="#main"><AiOutlineUser /></StyledAnchor>
-      <StyledAnchor href="#rec"><BiBook /></StyledAnchor>
-      <StyledAnchor><BiMessageDetail /></StyledAnchor>
+      <StyledAnchor href="#">
+        <AiOutlineHome />
+      </StyledAnchor>
+      <StyledAnchor href="#main">
+        <AiOutlineUser />
+      </StyledAnchor>
+      <StyledAnchor href="#rec">
+        <BiBook />
+      </StyledAnchor>
+      <StyledAnchor href="#pricelist">
+        <BiMessageDetail />
+      </StyledAnchor>
     </StyledNav>
   );
 };

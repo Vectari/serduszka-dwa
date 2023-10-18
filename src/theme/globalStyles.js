@@ -6,10 +6,11 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
   body {
-    margin: 0;
+    margin: auto;
     padding: 0;
     text-align: center;
     background-color: ${theme.colors.background};
+    max-width: 1100px;
   }
 `;
 
