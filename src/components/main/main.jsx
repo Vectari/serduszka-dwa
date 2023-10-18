@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import coupleinshadow from "../../media/coupleinshadow.jpg";
+import couplehike from '../../media/couple-hike.jpg'
 import { theme } from "../../theme/theme";
 
 const StyledImg = styled.img`
@@ -34,7 +35,7 @@ const Main = () => {
   return (
     <>
       <StyledImg src={coupleinshadow} alt="couple in shadow" />
-      <StyledArticle>
+      <StyledArticle id="main">
         Biuro Serduszka Dwa zaprasza osoby samotne, poszukujące wymarzonego
         partnera życiowego, przyjaciółki/przyjaciela lub po prostu, kogoś z kim
         wspólnie można wyjść na kawę lub pojechać na wspólne wakacje. Biuro
@@ -77,6 +78,7 @@ const Main = () => {
         zostaniecie wymienieni numerami kontaktowymi. Teraz wszystko w Waszych
         rękach!
       </StyledArticleSteps>
+      <StyledImg src={couplehike} alt="couple hiking" />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import NavBar from "./components/navbar/navbar";
 import Header from "./components/header/header";
 import Main from "./components/main/main";
+import Rec from "./components/recommendations/recommendations";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <NavBar />
       <Header />
       <Main />
+      <Rec />
     </>
   );
 }

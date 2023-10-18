@@ -43,9 +43,9 @@ const NavBar = () => {
       <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}></a>
       <a href="#experience" onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}></a>
       <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}></a> */}
-      <StyledAnchor><AiOutlineHome /></StyledAnchor>
-      <StyledAnchor><AiOutlineUser /></StyledAnchor>
-      <StyledAnchor><BiBook /></StyledAnchor>
+      <StyledAnchor href="#"><AiOutlineHome /></StyledAnchor>
+      <StyledAnchor href="#main"><AiOutlineUser /></StyledAnchor>
+      <StyledAnchor href="#rec"><BiBook /></StyledAnchor>
       <StyledAnchor><BiMessageDetail /></StyledAnchor>
     </StyledNav>
   );
