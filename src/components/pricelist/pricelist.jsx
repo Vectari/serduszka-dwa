@@ -23,8 +23,6 @@ const StyledPicAndPrice = styled.div`
 
 const StyledImg = styled.img`
   width: 45%;
-  /* margin-right: 10px; */
-  /* flex: 1; */
   border-radius: 0.5rem;
   @media (max-width: 768px) {
     margin: auto;
@@ -35,7 +33,6 @@ const StyledImg = styled.img`
 
 const StyledPrice = styled.p`
   width: 90%;
-  /* flex: 1; */
   margin: auto auto auto 10px;
   font-size: 2rem;
   font-family: "Roboto";
@@ -64,13 +61,6 @@ const PriceList = () => {
           <strong>260 zł.</strong>
         </StyledPrice>
       </StyledPicAndPrice>
-
-      {/* TODO
-    1. cennik i zdjęcie obok siebie
-    2. czeste pytania
-    3. kontakt
-    4. mail
-    5. mapka */}
     </>
   );
 };

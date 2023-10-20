@@ -27,7 +27,7 @@ const StyledImg = styled.img`
   border-radius: 0.5rem;
 `;
 
-const StyledDiv = styled.div`
+const StyledPhotoGalleryDiv = styled.div`
   width: 90%;
   margin: auto;
 `;
@@ -53,9 +53,9 @@ const Rec = () => {
       </StyledArticleHeader>
       <StyledImg src={newspaper} alt="article in newspaper" />
       <StyledArticleHeader>Zadowoleni klienci</StyledArticleHeader>
-      <StyledDiv>
+      <StyledPhotoGalleryDiv>
         <PhotoAlbum layout="rows" photos={photos} />
-      </StyledDiv>
+      </StyledPhotoGalleryDiv>
     </>
   );
 };

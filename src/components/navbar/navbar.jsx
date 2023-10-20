@@ -5,6 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineArticle } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
 import { PiHandCoinsDuotone } from "react-icons/pi";
+import { GrCircleQuestion } from "react-icons/gr";
 
 const StyledNav = styled.nav`
   background: rgba(0, 0, 0, 0.3);
@@ -54,6 +55,9 @@ const NavBar = () => {
       </StyledAnchor>
       <StyledAnchor href="#pricelist">
         <PiHandCoinsDuotone />
+      </StyledAnchor>
+      <StyledAnchor href="#questions">
+        <GrCircleQuestion />
       </StyledAnchor>
     </StyledNav>
   );
