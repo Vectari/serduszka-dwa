@@ -3,7 +3,8 @@ import Header from "./components/header/header";
 import Main from "./components/main/main";
 import Rec from "./components/recommendations/recommendations";
 import PriceList from "./components/pricelist/pricelist";
-import Questions from "./components/questions/questions"
+import Questions from "./components/questions/questions";
+import Contact from "./components/contact/contact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Rec />
       <PriceList />
       <Questions />
+      <Contact />
     </>
   );
 }
