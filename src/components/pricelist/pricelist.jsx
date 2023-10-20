@@ -31,7 +31,7 @@ const StyledImg = styled.img`
   }
 `;
 
-const StyledPrice = styled.p`
+const StyledPrice = styled.article`
   width: 90%;
   margin: auto auto auto 10px;
   font-size: 2rem;
