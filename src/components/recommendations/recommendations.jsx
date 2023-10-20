@@ -27,6 +27,11 @@ const StyledImg = styled.img`
   border-radius: 0.5rem;
 `;
 
+const StyledDiv = styled.div`
+  width: 90%;
+  margin: auto;
+`;
+
 const Rec = () => {
   const photos = [
     { src: `${photo1}`, width: 400, height: 300 },
@@ -48,7 +53,9 @@ const Rec = () => {
       </StyledArticleHeader>
       <StyledImg src={newspaper} alt="article in newspaper" />
       <StyledArticleHeader>Zadowoleni klienci</StyledArticleHeader>
-      <PhotoAlbum layout="rows" photos={photos} />
+      <StyledDiv>
+        <PhotoAlbum layout="rows" photos={photos} />
+      </StyledDiv>
     </>
   );
 };
