@@ -50,7 +50,7 @@ const PriceList = () => {
         <StyledImg src={coupleDance} alt="dancing couple" />
         <StyledPrice>
           <h3>Opłata za usługi Biura Serduszka Dwa</h3>
-          <h2>660 zł</h2>
+          <h2>700 zł</h2>
           <br /> Czas trwania abonamentu:
           <br />
           <u>
@@ -58,7 +58,7 @@ const PriceList = () => {
           </u>
           <br />
           <br /> Istnieje też możliwość płatności za jedną ofertę: <br />
-          <strong>260 zł.</strong>
+          <strong>260-300 zł.</strong>
         </StyledPrice>
       </StyledPicAndPrice>
     </>
