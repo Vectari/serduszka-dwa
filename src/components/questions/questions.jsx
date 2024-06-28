@@ -88,6 +88,18 @@ const Questions = () => {
         poznać drugiego człowieka i gdy zajdzie taka potrzeba, dojść wspólnie do
         porozumienia.
       </StyledAnswer>
+      <StyledQuestion>
+        Czy istnieje możliwość poznania kogoś w charakterze osoby towarzyszącej
+        na różne okazje?
+      </StyledQuestion>{" "}
+      <StyledAnswer>
+        Biuro Serduszka Dwa świadczy także usługi poznania osób na specjalne
+        okazje np. wspólne spędzenie Sylwestra. Wspólnego spędzenia wakacji,
+        wycieczki. Kolejny przykład to jako osoba towarzysząca na imprezę typu
+        ślub, wesele i inne podobne okoliczności gdzie stawka usługi Biura
+        Serduszka Dwa jest indywidualnie ustalana z zainteresowanymi Klientami
+        za tego typu usługę poznania osób za pośrednictwem Biura.
+      </StyledAnswer>
       {/* TODO
     3. kontakt
     4. mail
