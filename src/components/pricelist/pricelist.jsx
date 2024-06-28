@@ -61,6 +61,13 @@ const PriceList = () => {
           <strong>260-300 zł.</strong>
         </StyledPrice>
       </StyledPicAndPrice>
+      <p>
+        Kwota płatności może być inna tzn. wyższa, indywidualnie ustalona z
+        Klientką/Klientem jeśli trudność usługi tego wymaga, oczekiwania
+        Klientów są ofertą VIP. - specjalnymi wymogami, na które to, Biuro
+        Serduszka Dwa na życzenie Klientów musi zadbać i specjalnie zwrócić
+        uwagę.
+      </p>
     </>
   );
 };
