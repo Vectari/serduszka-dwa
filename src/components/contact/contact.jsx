@@ -39,6 +39,7 @@ const Contact = () => {
         <br /> 85-239 Bydgoszcz <h3>Kontakt:</h3>{" "}
         <a href={mailtoUrl}>biuroserduszkadwa@gmail.com</a>
         <br />
+        <br />
         <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
       </StyledContact>
 
