@@ -1,8 +1,7 @@
 # Website of "Serduszka Dwa - Biuro Matrymonialne"
 Website >> https://www.serduszkadwa.pl/
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e502700e-a5a6-4f93-8ec7-612d79d5eb51/deploy-status)](https://app.netlify.com/sites/serduszkadwa/deploys)
-
+https://serduszkadwa.netlify.app/
 <h2 align="center"> 🛠️ Main Tech Stack </h2>
 <div align="center">
 
