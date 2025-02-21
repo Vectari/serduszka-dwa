@@ -1,23 +1,8 @@
-# Website of "Serduszka Dwa - Biuro Matrymonialne"
-Website >> https://www.serduszkadwa.pl/
+# React + Vite
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/e502700e-a5a6-4f93-8ec7-612d79d5eb51/deploy-status)](https://app.netlify.com/sites/serduszkadwa/deploys)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-https://serduszkadwa.netlify.app/
-<h2 align="center"> 🛠️ Main Tech Stack </h2>
-<div align="center">
+Currently, two official plugins are available:
 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-
-</div> 
-
-<h2 align="center"> Screenshots </h2>
-
-![screenshot 1](src/media/Screenshot%20from%202024-06-29%2011-33-28.png)
-
-![screenshot 2](src/media/Screenshot%20from%202024-06-29%2011-34-20.png)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
