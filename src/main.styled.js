@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 
-export const StyledBody = styled.body`
+export const GlobalStyles = createGlobalStyle`
+body {
   /* background-color: ${theme.colors.background}; */
   margin: 0;
   padding: 0;
@@ -33,4 +34,4 @@ export const StyledBody = styled.body`
     font-size: 14px;
     padding: 0 10px;
   }
-`;
+}`;

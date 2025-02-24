@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { StyledBody } from "./main.styled";
+import { GlobalStyles } from "./main.styled";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { NavBar } from "./components/NavBar/NavBar";
 import { Home } from "./view/Home/Home";
@@ -57,7 +57,8 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <StyledBody>
+  <>
+    <GlobalStyles />
     <RouterProvider router={router} />
-  </StyledBody>
+  </>
 );
