@@ -5,8 +5,11 @@ export const theme = {
   navbar_text: "#545454",
   navbar_text_active: "#c6b790",
 
-  button_primary: "#c6b790",
+  button_primary_background: "#c6b790",
   button_primary_text: "#545454",
+
+  button_secondary_background: "#f5f4f0",
+  button_secondary_text: "#545454",
 
   section_one_background: "#a09e77",
   section_one_text_on_background: "#f5f4f0",
