@@ -23,4 +23,5 @@ export const theme = {
   alert_text: "#545454",
 
   border_and_lines: "#e8e8e8",
+  input: "#f5f4f0",
 };
