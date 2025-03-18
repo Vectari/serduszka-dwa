@@ -1,3 +1,3 @@
-export function Button() {
-  return <button>Button</button>;
+export function Button({ title }) {
+  return <button>{title}</button>;
 }

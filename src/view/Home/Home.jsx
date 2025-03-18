@@ -1,10 +1,10 @@
-import { dictionary } from "../../dictionary";
+import { Logo } from "../../components/Logo/Logo";
 
 export function Home() {
   return (
     <>
-      <h1>HOME</h1>
-      <p>{dictionary.info_one}</p>
+      <Logo />
+      <h1>Home</h1>
     </>
   );
 }

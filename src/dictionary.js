@@ -1,4 +1,9 @@
 export const dictionary = {
-  info_one:
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, possimus.",
+  home_page: {
+    name: "Serduszka Dwa",
+    description: "Biuro Matrymonialne i Partnerskie",
+    sloga: "catchy slogan",
+    button_one: "button_one",
+    button_two: "button_two",
+  },
 };
