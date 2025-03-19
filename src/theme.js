@@ -6,6 +6,7 @@ export const theme = {
   navbar_text_hover: "#c6b790",
 
   button_primary_background: "#c6b790",
+  button_primary_white: "#ffffff",
   button_primary_text: "#545454",
 
   button_secondary_background: "#f5f4f0",
