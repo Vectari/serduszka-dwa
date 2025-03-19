@@ -15,12 +15,12 @@ const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-  background-color: ${theme.background};
-  margin: 0;
+   margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
   font-family: "Roboto", sans-serif;
+  background-color: ${theme.background};
   color: ${theme.text_on_background};
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ body {
   /* Desktop */
   @media (min-width: 1024px) {
     font-size: 18px;
-    /* max-width: 1200px; */
+    max-width: 1200px;
     margin: 0 auto;
   }
 
