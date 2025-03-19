@@ -3,7 +3,7 @@ export const theme = {
   text_on_background: "#545454",
 
   navbar_text: "#545454",
-  navbar_text_active: "#c6b790",
+  navbar_text_hover: "#c6b790",
 
   button_primary_background: "#c6b790",
   button_primary_text: "#545454",
