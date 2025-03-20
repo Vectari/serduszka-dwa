@@ -1,11 +1,11 @@
-import LOGO from "../../media/logo.png";
+import LOGO from "../../media/logo_wide.png";
 
 export function Logo() {
   return (
     <img
       src={LOGO}
       alt="logo"
-      // style={{ transform: "scale(0.5)" }}
+      // style={{ transform: "scale(1)" }}
     />
   );
 }
