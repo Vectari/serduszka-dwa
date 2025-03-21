@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 import { theme } from "../../theme";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../Logo/Logo";
@@ -28,7 +30,7 @@ const StyledFooterRight = styled.div`
   a {
     color: ${theme.navbar_text};
     text-decoration: none;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
   }
 
   a:hover {
@@ -63,6 +65,12 @@ const StyledFooterCenter = styled.div`
 `;
 
 export function Footer() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top when route changes
+  }, [location.pathname]);
+
   return (
     <>
       <StyledFooterContainer>
