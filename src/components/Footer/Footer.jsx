@@ -68,7 +68,7 @@ export function Footer() {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scrolls to the top when route changes
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scrolls to the top when route changes
   }, [location.pathname]);
 
   return (
