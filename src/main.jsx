@@ -11,12 +11,11 @@ import { Alert } from "./view/Alert/Alert";
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 import { Footer } from "./components/Footer/Footer";
+import { AlertComponent } from "./components/AlertComponent/AlertComponent";
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 body {
-   margin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
@@ -53,6 +52,7 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
+        <AlertComponent />
         <NavBar />
         <Outlet />
         <Footer />
