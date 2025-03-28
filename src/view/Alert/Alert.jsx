@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { collection, addDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
 export function Alert() {
@@ -14,19 +14,25 @@ export function Alert() {
 
     if (adminPass === import.meta.env.VITE_ADMIN_PASS) {
       try {
-        const docRef = await addDoc(collection(db, "alerts"), {
+        // Używamy stałego identyfikatora dla dokumentu
+        const docRef = doc(db, "alerts", "alert"); // "alert" to unikalny identyfikator dokumentu
+        await setDoc(docRef, {
           isShown,
           text,
           fontColor,
           bgColor,
         });
-        console.log("Document written with ID: ", docRef.id);
-        // Clear form after submission
-        setIsShown(true);
-        setText("");
-        setFontColor("");
-        setBgColor("");
-        setAdminPass("");
+        console.log("Document successfully written!");
+
+        // Odświeżenie strony po udanym zapisaniu danych
+        window.location.reload(); // Odświeża stronę
+
+        // Opcjonalnie możesz wyczyścić formularz po wysłaniu
+        // setIsShown(true);
+        // setText("");
+        // setFontColor("");
+        // setBgColor("");
+        // setAdminPass("");
       } catch (e) {
         console.error("Error adding document: ", e);
       }
@@ -62,9 +68,8 @@ export function Alert() {
           onChange={(e) => setFontColor(e.target.value)}
         >
           <option value="">Select Color</option>
-          <option value="red">Red</option>
-          <option value="blue">Blue</option>
-          <option value="green">Green</option>
+          <option value="white">White</option>
+          <option value="black">Black</option>
           {/* Add more color options as needed */}
         </select>
       </label>
