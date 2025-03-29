@@ -2,9 +2,10 @@
 
 import styled from "styled-components";
 import { theme } from "../../theme";
+import { dictionary } from "../../dictionary";
 
-const mailtoUrl = "biuroserduszkadwa@gmail.com";
-const phoneNumber = "123123123";
+const mailtoUrl = `${dictionary.main_info.email}`;
+const phoneNumber = `${dictionary.main_info.phone_numer}`;
 
 const StyledMapConatiner = styled.div`
   display: flex;
@@ -36,10 +37,10 @@ export function Map() {
         <p>&quot;Serduszka Dwa&quot;</p>
         ul. Grundwaldzka 73/3
         <br /> 85-239 Bydgoszcz <h3>Kontakt:</h3>{" "}
-        <a href={mailtoUrl}>biuroserduszkadwa@gmail.com</a>
+        <a href={mailtoUrl}>{dictionary.main_info.email}</a>
         <br />
         <br />
-        <a href={`tel:${phoneNumber}`}>{phoneNumber}</a>
+        <a href={`tel:${phoneNumber}`}>{dictionary.main_info.phone_numer}</a>
       </StyledContactInfo>
     </StyledMapConatiner>
   );
