@@ -1,3 +1,7 @@
+import { FaFacebook } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { MdOutlineAlternateEmail } from "react-icons/md";
 import { useEffect } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
@@ -78,9 +82,15 @@ export function Footer() {
           <StyledLogoContainer>
             <Logo />
             <p>Serduszka Dwa</p>
-            <span>{dictionary.main_info.phone_numer}</span>
+            <span>
+              <FaPhone />
+              {dictionary.main_info.phone_numer}
+            </span>
             <br />
-            <span>{dictionary.main_info.email}</span>
+            <span>
+              <MdOutlineAlternateEmail />
+              {dictionary.main_info.email}
+            </span>
           </StyledLogoContainer>
         </StyledFooterLeft>
         <StyledFooterRight>
@@ -91,6 +101,8 @@ export function Footer() {
           <NavLink to="/contact">{dictionary.navbar.contact_page}</NavLink>
           <NavLink to="/map">{dictionary.navbar.map_page}</NavLink>
         </StyledFooterRight>
+        <FaFacebook />
+        <FaGoogle />
       </StyledFooterContainer>
       <StyledFooterCenter>Created by Mateusz Majer</StyledFooterCenter>
     </>
