@@ -12,3 +12,5 @@ Currently, two official plugins are available:
 
 color palete
 https://imagecolorpicker.com/
+
+https://images-workbench.99static.com/SXj76HfwzLrwy3WiLBCskb_rmCM=/http://s3.amazonaws.com/projects-files/47/4722/472296/d638e312-7edf-40d5-a58d-d3d032565f54.png
