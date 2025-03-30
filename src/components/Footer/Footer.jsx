@@ -68,6 +68,16 @@ const StyledFooterCenter = styled.div`
   margin-left: -2rem;
 `;
 
+const StyledFooterSocial = styled.div`
+margin-top: 2rem;
+scale: 1.5;
+margin-left: -32rem;
+
+  svg {
+    padding-right: 1.5rem;
+  }
+`;
+
 export function Footer() {
   const location = useLocation();
 
@@ -101,8 +111,10 @@ export function Footer() {
           <NavLink to="/contact">{dictionary.navbar.contact_page}</NavLink>
           <NavLink to="/map">{dictionary.navbar.map_page}</NavLink>
         </StyledFooterRight>
-        <FaFacebook />
-        <FaGoogle />
+        <StyledFooterSocial>
+          <FaFacebook />
+          <FaGoogle />
+        </StyledFooterSocial>
       </StyledFooterContainer>
       <StyledFooterCenter>Created by Mateusz Majer</StyledFooterCenter>
     </>
