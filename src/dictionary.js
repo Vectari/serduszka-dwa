@@ -57,4 +57,27 @@ export const dictionary = {
       six_number: "Z",
     },
   },
+  info_page: {
+    info_page_one_head: "Jak zostać klientem Biura Serduszka Dwa?",
+    info_page_steps: {
+      a: "1️⃣ Skontaktuj się z nami i umów na wizytę lub rozmowę telefoniczną.",
+      b: "2️⃣ Odpowiedz na pytania dotyczące Twoich oczekiwań względem przyszłego partnera.",
+      c: "3️⃣ Uiść opłatę za usługę.",
+      d: "4️⃣ W ciągu 2-4 dni otrzymasz pierwsze propozycje poznania kandydata.",
+      e: "5️⃣ Jeśli obie strony wyrażą zainteresowanie, wymieniamy Was kontaktami.",
+    },
+    info_page_two_head: "Często zadawane pytania (FAQ)",
+    info_page_faq: {
+      q1: "Czy muszę odwiedzić biuro osobiście, aby się zapisać?",
+      a1: "Nie. Możesz dołączyć do naszej bazy przez rozmowę telefoniczną i przesłanie zdjęć online.",
+      q2: "Czy wszyscy klienci są osobami stanu wolnego?",
+      a2: "Tak. Przyjmujemy tylko osoby wolne – kawalerów, panny, rozwodników, wdowców oraz osoby w długotrwałej separacji.",
+      q3: "Czy mogę zapłacić w ratach?",
+      a3: "Tak, oferujemy możliwość płatności w dwóch ratach.",
+      q4: "Jakie są szanse na znalezienie odpowiedniego partnera?",
+      a4: "Nie obiecujemy miłości od pierwszego wejrzenia, ale dokładamy wszelkich starań, aby dobierać osoby o podobnych wartościach i oczekiwaniach. Biuro nie ponosi odpowiedzialności za rozwój relacji – to decyzja samych klientów.",
+      q5: "Czy mogę znaleźć osobę do towarzystwa na wyjazdy lub imprezy?",
+      a5: "Tak! Pomagamy w znalezieniu towarzyszy na różne okazje, np. Sylwestra, wakacje, wesela. Koszt usługi ustalany jest indywidualnie.",
+    },
+  },
 };
