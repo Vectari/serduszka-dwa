@@ -44,17 +44,17 @@ export const dictionary = {
       "Jeśli pragniesz prawdziwego związku, pełnego szacunku, miłości i zrozumienia, a jednocześnie masz już dość nieudanych randek, przypadkowych znajomości i wirtualnych rozmów bez przyszłości – Serduszka Dwa to miejsce, które zostało stworzone właśnie dla Ciebie. Nie musisz już dłużej marnować czasu na osoby, które nie podchodzą poważnie do relacji. Dołącz do grona tych, którzy dzięki naszej pomocy znaleźli swoje szczęście i rozpoczęli nowy, piękny etap życia. Skontaktuj się z nami i pozwól sobie na prawdziwe, wartościowe uczucie, które może odmienić Twoją przyszłość!",
     highlights: {
       one_head: "Par w związkach partnerskich",
-      one_number: "2000+",
+      one_number: "2000",
       two_head: "Dzieci z tych związków",
       two_number: "3",
       three_head: "Par, które wzięły ślub",
       three_number: "22",
       four_head: "Lat doświadczenia",
-      four_number: "X",
+      four_number: "99",
       five_head: "Najdłuższy staż pary poznanej w biurze",
-      five_number: "Y",
+      five_number: "33",
       six_head: "Średni czas znalezienia partnera",
-      six_number: "Z",
+      six_number: "55",
     },
   },
   info_page: {
@@ -80,4 +80,7 @@ export const dictionary = {
       a5: "Tak! Pomagamy w znalezieniu towarzyszy na różne okazje, np. Sylwestra, wakacje, wesela. Koszt usługi ustalany jest indywidualnie.",
     },
   },
+  price_page: {
+    
+  }
 };
