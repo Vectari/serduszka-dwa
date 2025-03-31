@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import coupleinshadow from "../../media/coupleinwhite.jpg";
 import coupleonbridge from "../../media/couplebridge.jpg";
-import coupledirtydancinggif from "../../media/couple_dirtydancing_gif.gif";
+import coupledirtydancingvideo from "../../media/couple_dirtydancing_video.mp4";
 import { Button } from "../../components/Button/Button";
 import { Highlights } from "../../components/Highlights/Highlights";
 import { dictionary } from "../../dictionary";
-import { useState } from "react";
 
 const StyledImg = styled.img`
+  width: 100%;
+  border-radius: 1rem;
+`;
+
+const StyledVideo = styled.video`
   width: 100%;
   border-radius: 1rem;
 `;
@@ -28,8 +32,6 @@ const StyledContentOnMainPhoto = styled.div`
 `;
 
 export function Home() {
-  const [gifEnded, setGifEnded] = useState(false);
-
   return (
     <>
       <StyledContentOnMainPhoto>
@@ -43,15 +45,10 @@ export function Home() {
       <h2>{dictionary.home_page.main_info_two_head}</h2>
       <p>{dictionary.home_page.main_info_two}</p>
 
-      {gifEnded ? (
-        <StyledImg src={coupleinshadow} alt="Last frame" />
-      ) : (
-        <StyledImg
-          src={coupledirtydancinggif}
-          alt="GIF"
-          onAnimationEnd={() => setGifEnded(true)}
-        />
-      )}
+      <StyledVideo autoPlay loop muted>
+        <source src={coupledirtydancingvideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </StyledVideo>
 
       <h2>{dictionary.home_page.main_info_three_head}</h2>
       <p>{dictionary.home_page.main_info_three}</p>
