@@ -1,6 +1,6 @@
 export const dictionary = {
   main_info: {
-    phone_numer: "123123123",
+    phone_numer: "883-783-782",
     email: "biuroserduszkadwa@gmail.com",
   },
   navbar: {
@@ -81,6 +81,22 @@ export const dictionary = {
     },
   },
   price_page: {
-    
-  }
+    price_page_head: "Cennik Opłaty za korzystanie z usług biura Serduszka Dwa",
+    price_page_subscription: "Abonament na 6 miesięcy: ",
+    price_page_subscription_price: "700 zł",
+    price_page_one_offer:
+      "Jednorazowa oferta (1 propozycja poznania kandydata): ",
+    price_page_one_offer_price: "260-300 zł",
+    price_page_vip_offer:
+      "Oferta VIP (specjalne wymagania, zwiększona trudność w doborze kandydatów): ",
+    price_page_vip_price:
+      "cena ustalana indywidualnie Istnieje możliwość płatności w dwóch ratach",
+    price_page_info_head: "Co obejmuje opłata?",
+    price_page_info_one:
+      "✔ Profesjonalne dobranie kandydatów na podstawie Twojego profilu i oczekiwań",
+    price_page_info_two: "✔ Przedstawienie ofert i zdjęć kandydatów",
+    price_page_info_three: "✔ Wymiana kontaktów po obustronnej zgodzie",
+    price_page_info_four:
+      "✔ Możliwość skorzystania z ofert na wspólne wyjścia i wyjazdy",
+  },
 };
