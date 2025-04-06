@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
+import { NavLink } from "react-router-dom";
 
 const SVG_CODE = `<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="325.000000pt" height="177.000000pt" viewBox="0 0 325.000000 177.000000"
@@ -38,11 +39,18 @@ const LogoIcon = styled.div`
   height: auto;
 `;
 
-export function Logo() {
+const StyledLogoNavLink = styled(NavLink)`
+  text-decoration: none;
+`;
+
+// eslint-disable-next-line react/prop-types
+export function Logo({ to }) {
   return (
     <LogoWrapper>
-      <LogoIcon dangerouslySetInnerHTML={{ __html: SVG_CODE }} />
-      <p>Serduszka Dwa</p>
+      <StyledLogoNavLink to={to}>
+        <LogoIcon dangerouslySetInnerHTML={{ __html: SVG_CODE }} />
+        <p>Serduszka Dwa</p>
+      </StyledLogoNavLink>
     </LogoWrapper>
   );
 }
