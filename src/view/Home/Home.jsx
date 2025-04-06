@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import coupleinshadow from "../../media/coupleinwhite.jpg";
 import coupleonbridge from "../../media/couplebridge.jpg";
-import coupledirtydancingvideo from "../../media/couple_dirtydancing_video.mp4";
+import coupledirtydancinggif from "../../media/couple_dirtydancing_gif_new.gif";
 import { Button } from "../../components/Button/Button";
 import { Highlights } from "../../components/Highlights/Highlights";
 import { dictionary } from "../../dictionary";
@@ -11,13 +11,8 @@ const StyledImg = styled.img`
   border-radius: 1rem;
 `;
 
-const StyledVideo = styled.video`
-  width: 100%;
-  border-radius: 1rem;
-`;
-
 const StyledHighlightsContainer = styled.div`
-  display: grid;
+  display: block;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   width: 100%;
@@ -45,10 +40,7 @@ export function Home() {
       <h2>{dictionary.home_page.main_info_two_head}</h2>
       <p>{dictionary.home_page.main_info_two}</p>
 
-      <StyledVideo autoPlay loop muted>
-        <source src={coupledirtydancingvideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </StyledVideo>
+      <StyledImg src={coupledirtydancinggif} alt="couple photo" />
 
       <h2>{dictionary.home_page.main_info_three_head}</h2>
       <p>{dictionary.home_page.main_info_three}</p>
