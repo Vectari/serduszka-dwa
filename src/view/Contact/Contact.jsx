@@ -56,18 +56,26 @@ export function Contact() {
       <br />
       <br />
       <div>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="space-y-4 max-w-md mx-auto"
-        >
+        <form onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
             placeholder="Imię"
             {...register("name", { required: "Imię jest wymagane" })}
-            className="w-full p-2 border rounded"
           />
           {errors.name && <p className="text-red-500">{errors.name.message}</p>}
-
+          <p>/^\d{9}$/</p>
+          <input
+            type="tel"
+            placeholder="Numer kontaktowy"
+            {...register("phoneNumber", {
+              pattern: {
+                value: /^\d{9}$/,
+                message: "Nieprawidłowy format numeru",
+              },
+            })}
+          />
+          {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
+          <p>/^[^\s@]+@[^\s@]+\.[^\s@]+$/</p>
           <input
             type="email"
             placeholder="Email"
@@ -78,35 +86,21 @@ export function Contact() {
                 message: "Nieprawidłowy format emaila",
               },
             })}
-            className="w-full p-2 border rounded"
           />
-          {errors.email && (
-            <p className="text-red-500">{errors.email.message}</p>
-          )}
+          {errors.email && <p>{errors.email.message}</p>}
 
           <textarea
             placeholder="Wiadomość"
             {...register("message", { required: "Wiadomość jest wymagana" })}
-            className="w-full p-2 border rounded"
           />
-          {errors.message && (
-            <p className="text-red-500">{errors.message.message}</p>
-          )}
+          {errors.message && <p>{errors.message.message}</p>}
 
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
-            disabled={status === "sending"}
-          >
+          <button type="submit" disabled={status === "sending"}>
             {status === "sending" ? "Wysyłanie..." : "Wyślij"}
           </button>
 
-          {status === "sent" && (
-            <p className="text-green-500">Wiadomość wysłana!</p>
-          )}
-          {status === "error" && (
-            <p className="text-red-500">Błąd podczas wysyłania.</p>
-          )}
+          {status === "sent" && <p>Wiadomość wysłana!</p>}
+          {status === "error" && <p>Błąd podczas wysyłania.</p>}
         </form>
       </div>
     </>
