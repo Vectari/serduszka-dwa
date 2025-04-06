@@ -3,72 +3,120 @@ import { NavLink } from "react-router-dom";
 import { theme } from "../../theme";
 import { Logo } from "../Logo/Logo";
 import { dictionary } from "../../dictionary";
+import { useState } from "react";
 
-const StyledNavBar = styled.div`
+const NavBarWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
-  background-color: ${theme.navbar_background};
-  padding-top: 1rem;
-  font-size: 1.3rem;
-
-  a {
-    color: ${theme.navbar_text};
-    padding: 1.5rem;
-    text-decoration: none;
-    transition: 0.5 ease;
+  align-items: center;
+  background: ${theme.navbar_background};
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  position: relative;
+  @media (max-width: 704px) {
+    flex-direction: column;
+    padding: 1rem;
   }
+`;
 
-  a:hover {
+const StyledLogoContainer = styled.div`
+  align-self: start;
+
+  div {
+    width: 140px;
+    margin-top: -6.8rem;
+  }
+`;
+
+const NavLinkWrapper = styled.div`
+  margin-top: -3rem;
+
+  @media (max-width: 704px) {
+    display: ${(props) => (props.active ? "block" : "none")};
+    text-align: center;
+  }
+`;
+
+const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+  transition: 0.2s;
+  color: ${theme.navbar_text};
+  margin-left: 0.8rem;
+
+  &:hover {
     color: ${theme.navbar_text_hover};
     transition: 0.3s;
   }
 
-  .active {
+  &.active {
     pointer-events: none;
     color: ${theme.navbar_text_hover};
-    /* font-weight: bold; */
+  }
+
+  @media (max-width: 704px) {
+    display: block;
+    margin: 1.4rem auto;
+
+    &:first-child {
+      border-top: 1px solid ${theme.border_and_lines};
+      width: 90vw;
+      border-radius: 1rem;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid ${theme.border_and_lines};
+      width: 90vw;
+      border-radius: 1rem;
+    }
   }
 `;
 
-const StyledLeftContainer = styled.div`
-  text-align: left;
-`;
+const StyledFontIcon = styled.span`
+  display: none;
+  position: absolute;
+  right: 1.5rem;
+  top: -0.1rem;
+  color: ${theme.navbar_text};
+  font-size: 2.6rem;
+  cursor: pointer;
 
-const StyledLogoContainer = styled.div`
-  text-align: center;
-
-  img {
-    scale: 0.15;
-    margin-top: -5.5rem;
+  &:hover {
+    color: ${theme.navbar_text_hover};
+    transition: 0.3s;
   }
 
-  p {
-    margin-top: -5.5rem;
+  @media (max-width: 704px) {
+    display: block;
   }
-`;
-
-const StyledRightContainer = styled.div`
-  text-align: right;
 `;
 
 export function NavBar() {
+  const [active, setActive] = useState(false);
+
   return (
-    <StyledNavBar>
-      <StyledLeftContainer>
-        <NavLink to="/">{dictionary.navbar.home_page}</NavLink>
-        <NavLink to="/info">{dictionary.navbar.info_page}</NavLink>
-        <NavLink to="/pricelist">{dictionary.navbar.price_page}</NavLink>
-      </StyledLeftContainer>
+    <NavBarWrapper>
       <StyledLogoContainer>
-        <Logo />
-        <p>Serduszka Dwa</p>
+        <Logo to={"/"} />
       </StyledLogoContainer>
-      <StyledRightContainer>
-        <NavLink to="/reviews">{dictionary.navbar.reviews_page}</NavLink>
-        <NavLink to="/contact">{dictionary.navbar.contact_page}</NavLink>
-        <NavLink to="/map">{dictionary.navbar.map_page}</NavLink>
-      </StyledRightContainer>
+      <StyledFontIcon onClick={() => setActive(!active)}>
+        &equiv;
+      </StyledFontIcon>
+      <NavLinkWrapper active={active} onClick={() => setActive(!active)}>
+        <StyledNavLink to="/">{dictionary.navbar.home_page}</StyledNavLink>
+        <StyledNavLink to="/info">{dictionary.navbar.info_page} </StyledNavLink>
+        <StyledNavLink to="/pricelist">
+          {dictionary.navbar.price_page}
+        </StyledNavLink>
+        <StyledNavLink to="/reviews">
+          {dictionary.navbar.reviews_page}
+        </StyledNavLink>
+        <StyledNavLink to="/contact">
+          {dictionary.navbar.contact_page}
+        </StyledNavLink>
+        <StyledNavLink to="/map">{dictionary.navbar.map_page}</StyledNavLink>
+      </NavLinkWrapper>
+
       {/* <NavLink to="/alert">Alert</NavLink> */}
-    </StyledNavBar>
+    </NavBarWrapper>
   );
 }
