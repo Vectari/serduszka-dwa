@@ -1,7 +1,5 @@
 import { FaFacebook } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa";
-import { MdOutlineAlternateEmail } from "react-icons/md";
 import { useEffect } from "react";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
@@ -10,71 +8,80 @@ import { NavLink } from "react-router-dom";
 import { Logo } from "../Logo/Logo";
 import { dictionary } from "../../dictionary";
 
-const StyledFooterContainer = styled.div`
+const StyledFooterWrapper = styled.div`
   display: flex;
+  border-top: 2px solid ${theme.border_and_lines};
+  margin-top: 3rem;
+  padding: 0 1rem;
   justify-content: space-between;
-  margin-top: 5rem;
-  padding: 2rem 0.5rem 1rem 0.5rem;
-  border-top: 0.2rem solid ${theme.border_and_lines};
+
+  @media (max-width: 704px) {
+    display: block;
+    text-align: center;
+  }
+`;
+
+const StyledLogoWrapper = styled.div`
+  svg {
+    scale: 0.33;
+  }
+`;
+
+const StyledLeftSide = styled.div`
+  margin-top: -5rem;
+
+  @media (min-width: 704px) {
+    margin-left: -5em;
+  }
+`;
+
+const StyledPhoneMailWrapper = styled.div`
   text-align: center;
+  font-size: 1.2rem;
 `;
 
-const StyledFooterLeft = styled.div`
-  text-align: left;
-  padding-left: 3rem;
-`;
-
-const StyledFooterRight = styled.div`
-  text-align: right;
-  padding-right: 6rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-
-  a {
-    color: ${theme.navbar_text};
-    text-decoration: none;
-    transition: 0.5s ease;
-  }
-
-  a:hover {
-    color: ${theme.navbar_text_hover};
-    transition: 0.3s;
-  }
-
-  .active {
-    pointer-events: none;
-    color: ${theme.navbar_text_hover};
-  }
-`;
-
-const StyledLogoContainer = styled.div`
-  text-align: center;
-
-  img {
-    scale: 0.15;
-    margin-top: -4.5rem;
-  }
-
-  p {
-    margin-top: -5.5rem;
-  }
-`;
-
-const StyledFooterCenter = styled.div`
-  text-align: center;
-  font-size: 0.7rem;
+const StyledRightSide = styled.div`
   margin-top: 1rem;
-  margin-left: -2rem;
 `;
 
-const StyledFooterSocial = styled.div`
-margin-top: 2rem;
-scale: 1.5;
-margin-left: -32rem;
+const StyledSocial = styled.div`
+  color: ${theme.text_on_background};
+  text-align: center;
 
   svg {
-    padding-right: 1.5rem;
+    scale: 1.5;
+    padding: 0.7rem;
+  }
+`;
+
+const StyledNavLinkWrapper = styled.div`
+  display: grid;
+  text-align: right;
+
+  @media (max-width: 704px) {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${theme.text_on_background};
+
+    &:hover {
+      color: ${theme.navbar_text_hover};
+      transition: 0.3s;
+    }
+
+    &.active {
+      pointer-events: none;
+      color: ${theme.navbar_text_hover};
+    }
+  }
+
+  .creator {
+    border-top: 1px solid ${theme.border_and_lines};
+    color: ${theme.border_and_lines};
+    margin-top: 2rem;
+    font-size: 0.5rem;
   }
 `;
 
@@ -86,37 +93,31 @@ export function Footer() {
   }, [location.pathname]);
 
   return (
-    <>
-      <StyledFooterContainer>
-        <StyledFooterLeft>
-          <StyledLogoContainer>
-            <Logo />
-            <p>Serduszka Dwa</p>
-            <span>
-              <FaPhone />
-              {dictionary.main_info.phone_numer}
-            </span>
-            <br />
-            <span>
-              <MdOutlineAlternateEmail />
-              {dictionary.main_info.email}
-            </span>
-          </StyledLogoContainer>
-        </StyledFooterLeft>
-        <StyledFooterRight>
+    <StyledFooterWrapper>
+      <StyledLeftSide>
+        <StyledLogoWrapper>
+          <Logo />
+        </StyledLogoWrapper>
+        <StyledPhoneMailWrapper>
+          <p>{dictionary.main_info.phone_numer}</p>
+          <p>{dictionary.main_info.email}</p>
+        </StyledPhoneMailWrapper>
+      </StyledLeftSide>
+      <StyledRightSide>
+        <StyledSocial>
+          <FaFacebook />
+          <FaGoogle />
+        </StyledSocial>
+        <StyledNavLinkWrapper>
           <NavLink to="/">{dictionary.navbar.home_page}</NavLink>
           <NavLink to="/info">{dictionary.navbar.info_page}</NavLink>
           <NavLink to="/pricelist">{dictionary.navbar.price_page}</NavLink>
           <NavLink to="/reviews">{dictionary.navbar.reviews_page}</NavLink>
           <NavLink to="/contact">{dictionary.navbar.contact_page}</NavLink>
           <NavLink to="/map">{dictionary.navbar.map_page}</NavLink>
-        </StyledFooterRight>
-        <StyledFooterSocial>
-          <FaFacebook />
-          <FaGoogle />
-        </StyledFooterSocial>
-      </StyledFooterContainer>
-      <StyledFooterCenter>Created by Mateusz Majer</StyledFooterCenter>
-    </>
+          <p className="creator">Created by Mateusz Majer</p>
+        </StyledNavLinkWrapper>
+      </StyledRightSide>
+    </StyledFooterWrapper>
   );
 }
