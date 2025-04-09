@@ -15,7 +15,7 @@ const StyledFooterWrapper = styled.div`
   padding: 0 1rem;
   justify-content: space-between;
 
-  @media (max-width: 704px) {
+  @media (max-width: ${dictionary.width.mobile}) {
     display: block;
     text-align: center;
   }
@@ -30,7 +30,7 @@ const StyledLogoWrapper = styled.div`
 const StyledLeftSide = styled.div`
   margin-top: -5rem;
 
-  @media (min-width: 704px) {
+  @media (min-width: ${dictionary.width.mobile - 1}) {
     margin-left: -5em;
   }
 `;
@@ -58,7 +58,7 @@ const StyledNavLinkWrapper = styled.div`
   display: grid;
   text-align: right;
 
-  @media (max-width: 704px) {
+  @media (max-width: ${dictionary.width.mobile}) {
     text-align: center;
   }
 

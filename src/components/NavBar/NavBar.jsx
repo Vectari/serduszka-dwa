@@ -13,7 +13,7 @@ const NavBarWrapper = styled.nav`
   font-size: 1rem;
   padding: 1rem 3rem;
   position: relative;
-  @media (max-width: 704px) {
+  @media (max-width: ${dictionary.width.mobile}) {
     flex-direction: column;
     padding: 1rem;
   }
@@ -31,7 +31,7 @@ const StyledLogoContainer = styled.div`
 const NavLinkWrapper = styled.div`
   margin-top: -3rem;
 
-  @media (max-width: 704px) {
+  @media (max-width: ${dictionary.width.mobile}) {
     display: ${(props) => (props.active ? "block" : "none")};
     text-align: center;
   }
@@ -53,7 +53,7 @@ const StyledNavLink = styled(NavLink)`
     color: ${theme.navbar_text_hover};
   }
 
-  @media (max-width: 704px) {
+  @media (max-width: ${dictionary.width.mobile}) {
     display: block;
     margin: 1.4rem auto;
 
@@ -85,7 +85,7 @@ const StyledFontIcon = styled.span`
     transition: 0.3s;
   }
 
-  @media (max-width: 704px) {
+  @media (max-width: ${dictionary.width.mobile}) {
     display: block;
   }
 `;
