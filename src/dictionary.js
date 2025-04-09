@@ -1,4 +1,7 @@
 export const dictionary = {
+  width: {
+    mobile: "740px",
+  },
   main_info: {
     phone_numer: "883-783-782",
     email: "biuroserduszkadwa@gmail.com",
