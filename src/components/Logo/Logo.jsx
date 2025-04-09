@@ -37,6 +37,7 @@ const LogoIcon = styled.div`
   display: flex;
   scale: 0.6;
   height: auto;
+  justify-content: center;
 `;
 
 const StyledLogoNavLink = styled(NavLink)`
