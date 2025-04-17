@@ -9,6 +9,11 @@ const phoneNumber = `${dictionary.main_info.phone_numer}`;
 
 const StyledMapConatiner = styled.div`
   display: flex;
+  text-align: center;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
 `;
 
 const StyledGoogleMap = styled.iframe`
@@ -17,6 +22,11 @@ const StyledGoogleMap = styled.iframe`
   height: 600px;
   border-radius: 1rem;
   border: 0.2rem solid ${theme.border_and_lines};
+
+  @media (max-width: 1200px) {
+    max-width: 90vw;
+    height: 450px;
+  }
 `;
 
 const StyledContactInfo = styled.div`
@@ -33,7 +43,7 @@ export function Map() {
         referrerpolicy="no-referrer-when-downgrade"
       ></StyledGoogleMap>
       <StyledContactInfo>
-        <h3>Adres:</h3> Biuro Matrymonialne i Partnerskie
+        <h3>Adres:</h3>Serduszka Dwa -  Biuro Matrymonialne i Partnerskie
         <p>&quot;Serduszka Dwa&quot;</p>
         ul. Grundwaldzka 73/3
         <br /> 85-239 Bydgoszcz <h3>Kontakt:</h3>{" "}
