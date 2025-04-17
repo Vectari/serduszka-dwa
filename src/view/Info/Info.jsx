@@ -1,5 +1,60 @@
 import { useState } from "react";
+import { theme } from "../../theme";
 import { dictionary } from "../../dictionary";
+import styled from "styled-components";
+
+const StyledInfoWrapper = styled.div`
+  text-align: center;
+
+  h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  p {
+    color: ${theme.section_two_text_on_background};
+    background-color: ${theme.section_two_background};
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+    span {
+      font-weight: bolder;
+      font-size: 1.1rem;
+    }
+  }
+`;
+
+const StyledFAQContainer = styled.div`
+  margin-top: 2rem;
+`;
+
+const StyledFAQItem = styled.div`
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+`;
+
+const StyledFAQQuestion = styled.h3`
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const StyledFAQAnswer = styled.div`
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  color: #333;
+  font-size: 16px;
+  padding: 0;
+
+  &.expanded {
+    max-height: 200px;
+    padding: 10px 0;
+  }
+`;
 
 export function Info() {
   const [expanded, setExpanded] = useState(null);
@@ -32,65 +87,43 @@ export function Info() {
   ];
 
   return (
-    <>
+    <StyledInfoWrapper>
       <h2>{dictionary.info_page.info_page_one_head}</h2>
-      <p>{dictionary.info_page.info_page_steps.a}</p>
-      <p>{dictionary.info_page.info_page_steps.b}</p>
-      <p>{dictionary.info_page.info_page_steps.c}</p>
-      <p>{dictionary.info_page.info_page_steps.d}</p>
-      <p>{dictionary.info_page.info_page_steps.e}</p>
+      <p>
+        <span>1. </span>
+        {dictionary.info_page.info_page_steps.a}
+      </p>
+      <p>
+        <span>2. </span>
+        {dictionary.info_page.info_page_steps.b}
+      </p>
+      <p>
+        <span>3. </span>
+        {dictionary.info_page.info_page_steps.c}
+      </p>
+      <p>
+        <span>4. </span>
+        {dictionary.info_page.info_page_steps.d}
+      </p>
+      <p>
+        <span>5. </span>
+        {dictionary.info_page.info_page_steps.e}
+      </p>
 
-      <div
-        style={
-          {
-            // maxWidth: "600px",
-          }
-        }
-      >
-        <h2 style={{ borderBottom: "2px solid #ddd", paddingBottom: "10px" }}>
-          {dictionary.info_page.info_page_two_head}
-        </h2>
-
+      <StyledFAQContainer>
+        <h2>{dictionary.info_page.info_page_two_head}</h2>
         {faqEntries.map((entry, index) => (
-          <div
-            key={index}
-            style={{
-              borderBottom: "1px solid #ccc",
-              padding: "10px 0",
-              transition: "all 0.3s ease-in-out",
-            }}
-          >
-            <h3
-              onClick={() => handleToggle(index)}
-              style={{
-                cursor: "pointer",
-                // color: expanded === index ? "#d9534f" : "#007bff",
-                fontSize: "18px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
+          <StyledFAQItem key={index}>
+            <StyledFAQQuestion onClick={() => handleToggle(index)}>
               {entry.question}
-              <span style={{ fontSize: "16px" }}>
-                {expanded === index ? "▲" : "▼"}
-              </span>
-            </h3>
-            <div
-              style={{
-                maxHeight: expanded === index ? "200px" : "0",
-                overflow: "hidden",
-                transition: "max-height 0.3s ease-in-out",
-                padding: expanded === index ? "10px 0" : "0",
-                color: "#333",
-                fontSize: "16px",
-              }}
-            >
+              <span>{expanded === index ? "▲" : "▼"}</span>
+            </StyledFAQQuestion>
+            <StyledFAQAnswer className={expanded === index ? "expanded" : ""}>
               {entry.answer}
-            </div>
-          </div>
+            </StyledFAQAnswer>
+          </StyledFAQItem>
         ))}
-      </div>
-    </>
+      </StyledFAQContainer>
+    </StyledInfoWrapper>
   );
 }
