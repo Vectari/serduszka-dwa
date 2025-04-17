@@ -1,6 +1,6 @@
 export const dictionary = {
   width: {
-    mobile: "740px",
+    mobile: "760px",
   },
   main_info: {
     phone_numer: "883-783-782",
@@ -50,14 +50,14 @@ export const dictionary = {
       one_number: "2000",
       two_head: "Dzieci z tych związków",
       two_number: "3",
-      three_head: "Par, które wzięły ślub",
+      three_head: "Par w związkach małżeńskich",
       three_number: "22",
       four_head: "Lat doświadczenia",
-      four_number: "99",
-      five_head: "Najdłuższy staż pary poznanej w biurze",
-      five_number: "33",
-      six_head: "Średni czas znalezienia partnera",
-      six_number: "55",
+      four_number: `${new Date().getFullYear() - 2009}`,
+      five_head: "Najdłuższy staż naszej pary (lata)",
+      five_number: "999",
+      six_head: "Średni czas znalezienia partnera (dni)",
+      six_number: "999",
     },
   },
   info_page: {
