@@ -2,10 +2,11 @@
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
+import { dictionary } from "../../dictionary";
 
 const StyledHighlightsContainer = styled.div`
-  width: 300px;
-  height: 250px;
+  width: 280px;
+  height: 230px;
   margin: 1rem;
   border-radius: 1rem;
   border: solid 0.1rem ${theme.border_and_lines};
@@ -20,6 +21,7 @@ const StyledHighlightsContainer = styled.div`
 
   text-align: center;
   padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 
   h1 {
     font-size: 1.5rem;
@@ -37,9 +39,24 @@ const StyledHighlightsContainer = styled.div`
     border-radius: 1rem;
     font-size: 2rem;
     font-weight: bold;
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; */
+    /* bottom: 2rem; */
     padding: 1.5rem;
     transition: all 0.5s ease-in-out;
+  }
+
+  @media (max-width: ${dictionary.width.mobile}) {
+    width: 200px;
+    height: 150px;
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+      padding: 1rem;
+    }
   }
 `;
 
