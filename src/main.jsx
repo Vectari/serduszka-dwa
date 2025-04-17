@@ -15,36 +15,15 @@ import { AlertComponent } from "./components/AlertComponent/AlertComponent";
 
 const GlobalStyles = createGlobalStyle`
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   line-height: 1.6;
   font-family: "Roboto", sans-serif;
   background-color: ${theme.background};
   color: ${theme.text_on_background};
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
-
-  /* Desktop */
-  @media (min-width: 1024px) {
-    font-size: 18px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  /* Tablet */
-  @media (max-width: 1023px) {
-    font-size: 16px;
-    padding: 0 20px;
-  }
-
-  /* Mobile */
-  @media (max-width: 767px) {
-    font-size: 14px;
-    padding: 0 10px;
-  }
+  max-width: 1200px;
+  padding: 0 1rem 0 1rem;
 }`;
 
 const router = createBrowserRouter([
