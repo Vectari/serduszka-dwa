@@ -6,16 +6,13 @@ import styled from "styled-components";
 const StyledInfoWrapper = styled.div`
   text-align: center;
 
-  h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-  }
-
   p {
     color: ${theme.section_two_text_on_background};
     background-color: ${theme.section_two_background};
     border-radius: 1rem;
     padding: 0.5rem;
+    margin: 0.5rem auto;
+    max-width: 700px;
 
     span {
       font-weight: bolder;
@@ -25,7 +22,16 @@ const StyledInfoWrapper = styled.div`
 `;
 
 const StyledFAQContainer = styled.div`
-  margin-top: 2rem;
+  margin: 2rem auto 0 auto;
+  max-width: 800px;
+  text-align: left;
+
+  h2 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 `;
 
 const StyledFAQItem = styled.div`
