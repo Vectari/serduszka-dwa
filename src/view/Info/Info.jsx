@@ -27,7 +27,7 @@ const StyledFAQContainer = styled.div`
   text-align: left;
 
   h2 {
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid ${theme.border_and_lines};
     padding-bottom: 10px;
     margin-bottom: 1rem;
     text-align: center;
@@ -35,14 +35,13 @@ const StyledFAQContainer = styled.div`
 `;
 
 const StyledFAQItem = styled.div`
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
+  border-bottom: 1px solid ${theme.border_and_lines};
+  padding: 0.3rem 0;
   transition: all 0.3s ease-in-out;
 `;
 
 const StyledFAQQuestion = styled.h3`
   cursor: pointer;
-  font-size: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,8 +51,7 @@ const StyledFAQAnswer = styled.div`
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-  color: #333;
-  font-size: 16px;
+  color: ${theme.navbar_text};
   padding: 0;
 
   &.expanded {
