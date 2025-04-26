@@ -47,7 +47,7 @@ export const dictionary = {
       "Jeśli pragniesz prawdziwego związku, pełnego szacunku, miłości i zrozumienia, a jednocześnie masz już dość nieudanych randek, przypadkowych znajomości i wirtualnych rozmów bez przyszłości – Serduszka Dwa to miejsce, które zostało stworzone właśnie dla Ciebie. Nie musisz już dłużej marnować czasu na osoby, które nie podchodzą poważnie do relacji. Dołącz do grona tych, którzy dzięki naszej pomocy znaleźli swoje szczęście i rozpoczęli nowy, piękny etap życia. Skontaktuj się z nami i pozwól sobie na prawdziwe, wartościowe uczucie, które może odmienić Twoją przyszłość!",
     highlights: {
       one_head: "Par w związkach partnerskich",
-      one_number: "2000",
+      one_number: "1400",
       two_head: "Dzieci z tych związków",
       two_number: "3",
       three_head: "Par w związkach małżeńskich",
@@ -56,18 +56,18 @@ export const dictionary = {
       four_number: `${new Date().getFullYear() - 2009}`,
       five_head: "Najdłuższy staż naszej pary (lata)",
       five_number: "999",
-      six_head: "Średni czas znalezienia partnera (dni)",
-      six_number: "999",
+      six_head: "Średni czas złożenia propozycji oferty (dni)",
+      six_number: "3",
     },
   },
   info_page: {
     info_page_one_head: "Jak zostać klientem Biura Serduszka Dwa?",
     info_page_steps: {
-      a: "1️⃣ Skontaktuj się z nami i umów na wizytę lub rozmowę telefoniczną.",
-      b: "2️⃣ Odpowiedz na pytania dotyczące Twoich oczekiwań względem przyszłego partnera.",
-      c: "3️⃣ Uiść opłatę za usługę.",
-      d: "4️⃣ W ciągu 2-4 dni otrzymasz pierwsze propozycje poznania kandydata.",
-      e: "5️⃣ Jeśli obie strony wyrażą zainteresowanie, wymieniamy Was kontaktami.",
+      a: "Skontaktuj się z nami i umów na wizytę lub rozmowę telefoniczną.",
+      b: "Odpowiedz na pytania dotyczące Twoich oczekiwań względem przyszłego partnera.",
+      c: "Uiść opłatę za usługę.",
+      d: "W ciągu 2-4 dni otrzymasz pierwsze propozycje poznania kandydata.",
+      e: "Jeśli obie strony wyrażą zainteresowanie, wymieniamy Was kontaktami.",
     },
     info_page_two_head: "Często zadawane pytania (FAQ)",
     info_page_faq: {
@@ -84,7 +84,7 @@ export const dictionary = {
     },
   },
   price_page: {
-    price_page_head: "Cennik Opłaty za korzystanie z usług biura Serduszka Dwa",
+    price_page_head: "Opłaty za korzystanie z usług biura",
     price_page_subscription: "Abonament na 6 miesięcy: ",
     price_page_subscription_price: "700 zł",
     price_page_one_offer:
