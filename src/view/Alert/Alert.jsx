@@ -62,26 +62,23 @@ export function Alert() {
       </label>
       <br />
       <label>
-        Font Color:
+        Kolor czcionki:
         <select
           value={fontColor}
           onChange={(e) => setFontColor(e.target.value)}
         >
           <option value="">Select Color</option>
-          <option value="white">White</option>
-          <option value="black">Black</option>
-          {/* Add more color options as needed */}
+          <option value="white">Biały</option>
+          <option value="black">Czarny</option>
         </select>
       </label>
       <br />
       <label>
-        Background Color:
+        Kolor tła:
         <select value={bgColor} onChange={(e) => setBgColor(e.target.value)}>
           <option value="">Select Color</option>
-          <option value="white">White</option>
-          <option value="black">Black</option>
-          <option value="gray">Gray</option>
-          {/* Add more color options as needed */}
+          <option value="red">Czerwony</option>
+          <option value="green">Zielony</option>
         </select>
       </label>
       <br />
