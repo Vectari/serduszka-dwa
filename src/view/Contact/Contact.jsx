@@ -133,6 +133,10 @@ const StatusMessage = styled.p`
       : theme.text};
 `;
 
+const StyledContact = styled.a`
+  color: ${theme.navbar_text};
+`;
+
 export function Contact() {
   const {
     register,
@@ -177,10 +181,14 @@ export function Contact() {
         ul. Grundwaldzka 73/3
         <br /> 85-239 Bydgoszcz
         <h3>Kontakt:</h3>
-        <a href={mailtoUrl}>{dictionary.main_info.email}</a>
+        <StyledContact href={mailtoUrl}>
+          {dictionary.main_info.email}
+        </StyledContact>
         <br />
         <br />
-        <a href={`tel:${phoneNumber}`}>{dictionary.main_info.phone_numer}</a>
+        <StyledContact href={`tel:${phoneNumber}`}>
+          {dictionary.main_info.phone_numer}
+        </StyledContact>
       </StyledLeftWrapper>
 
       <StyledFormWrapper>
