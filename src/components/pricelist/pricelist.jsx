@@ -50,7 +50,9 @@ const PriceList = () => {
         <StyledImg src={coupleDance} alt="dancing couple" />
         <StyledPrice>
           <h3>Opłata za usługi Biura Serduszka Dwa</h3>
-          <h2>700 zł</h2>
+          <h2>760 zł - 860 zł</h2>
+          <p>W zależności od trudności sprawy Klienta.</p>
+          <h3>Usługa VIP - dodatkowa usługa dla Klientów, do kwoty abonamentu plus 160 zł.</h3>
           <br /> Czas trwania abonamentu:
           <br />
           <u>
