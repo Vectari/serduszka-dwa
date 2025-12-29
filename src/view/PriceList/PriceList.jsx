@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { dictionary } from "../../dictionary";
 import { theme } from "../../theme";
+import COUPLE_PHOTO from "../../media/couple_price_page.jpg";
 
 const PriceListWrapper = styled.div`
   text-align: center;
@@ -28,6 +29,21 @@ const StyledPrice = styled.p`
   max-width: 75%;
 `;
 
+const ImageWrapper = styled.div`
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+`;
+
+const StyledImg = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+`;
+
 export function PriceList() {
   return (
     <PriceListWrapper>
@@ -53,6 +69,10 @@ export function PriceList() {
       <h3>{dictionary.price_page.price_page_info_two}</h3>
       <h3>{dictionary.price_page.price_page_info_three}</h3>
       <h3>{dictionary.price_page.price_page_info_four}</h3>
+
+      <ImageWrapper>
+        <StyledImg src={COUPLE_PHOTO} alt="couple photo" />
+      </ImageWrapper>
     </PriceListWrapper>
   );
 }

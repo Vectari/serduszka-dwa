@@ -33,6 +33,11 @@ const StyledContactInfo = styled.div`
   text-align: center;
 `;
 
+const StyledContact = styled.a`
+  color: ${theme.navbar_text};
+  text-decoration: none;
+`;
+
 export function Map() {
   return (
     <StyledMapConatiner>
@@ -43,14 +48,18 @@ export function Map() {
         referrerpolicy="no-referrer-when-downgrade"
       ></StyledGoogleMap>
       <StyledContactInfo>
-        <h3>Adres:</h3>Serduszka Dwa -  Biuro Matrymonialne i Partnerskie
+        <h3>Adres:</h3>Serduszka Dwa - Biuro Matrymonialne i Partnerskie
         <p>&quot;Serduszka Dwa&quot;</p>
         ul. Grundwaldzka 73/3
         <br /> 85-239 Bydgoszcz <h3>Kontakt:</h3>{" "}
-        <a href={mailtoUrl}>{dictionary.main_info.email}</a>
+        <StyledContact href={mailtoUrl}>
+          {dictionary.main_info.email}
+        </StyledContact>
         <br />
         <br />
-        <a href={`tel:${phoneNumber}`}>{dictionary.main_info.phone_numer}</a>
+        <StyledContact href={`tel:${phoneNumber}`}>
+          {dictionary.main_info.phone_numer}
+        </StyledContact>
       </StyledContactInfo>
     </StyledMapConatiner>
   );

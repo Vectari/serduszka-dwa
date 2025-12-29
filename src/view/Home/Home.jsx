@@ -30,7 +30,7 @@ const StyledHighlightsContainer = styled.div`
 const StyledContentOnMainPhoto = styled.div`
   position: absolute;
   padding: 1.5rem;
-  padding-left: 9rem;
+  padding-left: 6rem;
   width: 250px;
   text-align: center;
 
@@ -71,13 +71,13 @@ export function Home() {
           header={dictionary.home_page.highlights.one_head}
           number={dictionary.home_page.highlights.one_number}
         />
-        <Highlights
+        {/* <Highlights
           primary={false}
           header={dictionary.home_page.highlights.two_head}
           number={dictionary.home_page.highlights.two_number}
-        />
+        /> */}
         <Highlights
-          primary={true}
+          primary={false}
           header={dictionary.home_page.highlights.three_head}
           number={dictionary.home_page.highlights.three_number}
         />
@@ -86,13 +86,13 @@ export function Home() {
           header={dictionary.home_page.highlights.four_head}
           number={dictionary.home_page.highlights.four_number}
         />
-        <Highlights
+        {/* <Highlights
           primary={true}
           header={dictionary.home_page.highlights.five_head}
           number={dictionary.home_page.highlights.five_number}
-        />
+        /> */}
         <Highlights
-          primary={false}
+          primary={true}
           header={dictionary.home_page.highlights.six_head}
           number={dictionary.home_page.highlights.six_number}
         />
