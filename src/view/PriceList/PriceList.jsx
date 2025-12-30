@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { dictionary } from "../../dictionary";
 import { theme } from "../../theme";
-import COUPLE_PHOTO from "../../media/couple_price_page.jpg";
+import COUPLE_PHOTO from "../../media/couple_price_page.webp";
 
 const PriceListWrapper = styled.div`
   text-align: center;

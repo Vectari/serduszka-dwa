@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-import IMG1 from "../../media/cards/2 - list.jpg";
-import IMG2 from "../../media/cards/4 - list.jpg";
-import IMG3 from "../../media/cards/10 - list.jpg";
-import IMG4 from "../../media/cards/12 - list.jpg";
-import IMG5 from "../../media/cards/14 - list.jpg";
-import IMG6 from "../../media/cards/15 - list.jpg";
-import IMG7 from "../../media/cards/16 - list.jpg";
-import IMG8 from "../../media/cards/17 - list.jpg";
-import IMG9 from "../../media/cards/18 - list.jpg";
-import IMG10 from "../../media/cards/19 - list.jpg";
+import IMG1 from "../../media/cards/2 - list.webp";
+import IMG2 from "../../media/cards/4 - list.webp";
+import IMG3 from "../../media/cards/10 - list.webp";
+import IMG4 from "../../media/cards/12 - list.webp";
+import IMG5 from "../../media/cards/14 - list.webp";
+import IMG6 from "../../media/cards/15 - list.webp";
+import IMG7 from "../../media/cards/16 - list.webp";
+import IMG8 from "../../media/cards/17 - list.webp";
+import IMG9 from "../../media/cards/18 - list.webp";
+import IMG10 from "../../media/cards/19 - list.webp";
 import { GoogleReviewsSummary } from "../../components/GoogleReviewsSummary/GoogleReviewsSummary";
 import { theme } from "../../theme";
 

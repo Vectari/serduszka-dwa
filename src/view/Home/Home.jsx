@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import coupleinshadow from "../../media/coupleinwhite.jpg";
-import coupleonbridge from "../../media/couplebridge.jpg";
-import coupledirtydancinggif from "../../media/couple_dirtydancing_gif_new.gif";
+import coupleinshadow from "../../media/coupleinwhite.webp";
+import coupleonbridge from "../../media/couplebridge.webp";
+import coupledirtydancinggif from "../../media/couple_dirtydancing.webp";
 import { Button } from "../../components/Button/Button";
 import { Highlights } from "../../components/Highlights/Highlights";
 import { dictionary } from "../../dictionary";
