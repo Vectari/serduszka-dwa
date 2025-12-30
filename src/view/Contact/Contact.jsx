@@ -233,7 +233,13 @@ export function Contact() {
           />
           {errors.message && <ErrorText>{errors.message.message}</ErrorText>}
 
-          <StyledButton type="submit" disabled={status === "sending"}>
+          {/* <StyledButton type="submit" disabled={status === "sending"}>
+            {status === "sending" ? "Wysyłanie..." : "Wyślij"}
+          </StyledButton> */}
+          <p style={{ color: "red", textAlign: "center" }}>
+            Formularz kontaktowy chwilowo niedostępny
+          </p>
+          <StyledButton type="submit" disabled>
             {status === "sending" ? "Wysyłanie..." : "Wyślij"}
           </StyledButton>
 

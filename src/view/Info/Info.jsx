@@ -84,10 +84,10 @@ export function Info() {
       question: dictionary.info_page.info_page_faq.q4,
       answer: dictionary.info_page.info_page_faq.a4,
     },
-    {
-      question: dictionary.info_page.info_page_faq.q5,
-      answer: dictionary.info_page.info_page_faq.a5,
-    },
+    // {
+    //   question: dictionary.info_page.info_page_faq.q5,
+    //   answer: dictionary.info_page.info_page_faq.a5,
+    // },
   ];
 
   return (

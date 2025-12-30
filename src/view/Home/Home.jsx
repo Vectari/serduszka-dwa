@@ -66,11 +66,11 @@ export function Home() {
       <p>{dictionary.home_page.main_info_four}</p>
 
       <StyledHighlightsContainer>
-        <Highlights
+        {/* <Highlights
           primary={true}
           header={dictionary.home_page.highlights.one_head}
           number={dictionary.home_page.highlights.one_number}
-        />
+        /> */}
         {/* <Highlights
           primary={false}
           header={dictionary.home_page.highlights.two_head}
@@ -82,7 +82,7 @@ export function Home() {
           number={dictionary.home_page.highlights.three_number}
         />
         <Highlights
-          primary={false}
+          primary={true}
           header={dictionary.home_page.highlights.four_head}
           number={dictionary.home_page.highlights.four_number}
         />
@@ -92,9 +92,9 @@ export function Home() {
           number={dictionary.home_page.highlights.five_number}
         /> */}
         <Highlights
-          primary={true}
+          primary={false}
           header={dictionary.home_page.highlights.six_head}
-          number={dictionary.home_page.highlights.six_number}
+          number="2"
         />
       </StyledHighlightsContainer>
       <h2>{dictionary.home_page.main_info_five_head}</h2>

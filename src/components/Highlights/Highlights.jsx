@@ -6,48 +6,64 @@ import { dictionary } from "../../dictionary";
 
 const StyledHighlightsContainer = styled.div`
   width: 280px;
-  height: 230px;
+  min-height: 230px;
   margin: 1rem;
   border-radius: 1rem;
   border: solid 0.1rem ${theme.border_and_lines};
+
   background-color: ${(props) =>
     props.primary
-      ? `${theme.section_one_background}`
-      : `${theme.section_two_background}`};
+      ? theme.section_one_background
+      : theme.section_two_background};
+
   color: ${(props) =>
     props.primary
-      ? `${theme.section_one_text_on_background}`
-      : `${theme.section_two_text_on_background}`};
+      ? theme.section_one_text_on_background
+      : theme.section_two_text_on_background};
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
   text-align: center;
   padding: 1rem;
+
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 
   h1 {
     font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    word-break: break-word;
   }
 
   p {
     background-color: ${(props) =>
       props.primary
-        ? `${theme.section_one_btn_background}`
-        : `${theme.section_two_btn_background}`};
+        ? theme.section_one_btn_background
+        : theme.section_two_btn_background};
+
     color: ${(props) =>
       props.primary
-        ? `${theme.section_two_text_on_background}`
-        : `${theme.section_one_text_on_background}`};
+        ? theme.section_two_text_on_background
+        : theme.section_one_text_on_background};
+
     border-radius: 1rem;
     font-size: 2rem;
     font-weight: bold;
-    /* margin-top: 2.5rem; */
-    /* bottom: 2rem; */
-    padding: 1.5rem;
+    padding: 1rem 1.25rem;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     transition: all 0.5s ease-in-out;
   }
 
   @media (max-width: ${dictionary.width.mobile}) {
-    width: 200px;
-    height: 150px;
+    width: 100%;
+    max-width: 220px;
+    min-height: 150px;
 
     h1 {
       font-size: 1.2rem;
@@ -55,7 +71,7 @@ const StyledHighlightsContainer = styled.div`
 
     p {
       font-size: 1.3rem;
-      padding: 1rem;
+      padding: 0.75rem 1rem;
     }
   }
 `;
@@ -67,7 +83,6 @@ export function Highlights({ primary, header, number }) {
 
   useEffect(() => {
     const checkScroll = () => {
-      console.log("Sprawdzam scroll:", window.scrollY);
       if (window.scrollY > 100) {
         setHasAnimated(true);
         window.removeEventListener("scroll", checkScroll);
@@ -77,17 +92,17 @@ export function Highlights({ primary, header, number }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
-          console.log("Element wszedł w widok");
           if (window.scrollY > 100) {
-            console.log("Strona jest przewinięta, start animacji!");
             setHasAnimated(true);
           } else {
-            console.log("Dodaję nasłuchiwacz scrolla");
             window.addEventListener("scroll", checkScroll);
           }
         }
       },
-      { threshold: 0.5, rootMargin: "0px 0px -50px 0px" }
+      {
+        threshold: 0.5,
+        rootMargin: "0px 0px -50px 0px",
+      }
     );
 
     if (elementRef.current) {
@@ -104,27 +119,27 @@ export function Highlights({ primary, header, number }) {
   }, [hasAnimated]);
 
   useEffect(() => {
-    if (hasAnimated) {
-      let start = 0;
-      const duration = 1000; // 1 sekunda
-      const stepTime = Math.max(Math.floor(duration / number), 5);
+    if (!hasAnimated) return;
 
-      const counter = setInterval(() => {
-        start += 1;
-        setCount(start);
-        if (start >= number) {
-          clearInterval(counter);
-        }
-      }, stepTime);
-    }
+    let start = 0;
+    const duration = 1000;
+    const stepTime = Math.max(Math.floor(duration / number), 5);
+
+    const counter = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start >= number) {
+        clearInterval(counter);
+      }
+    }, stepTime);
+
+    return () => clearInterval(counter);
   }, [hasAnimated, number]);
 
   return (
     <StyledHighlightsContainer primary={primary} ref={elementRef}>
-      <div>
-        <h1>{header}</h1>
-        <p>{count}</p>
-      </div>
+      <h1>{header}</h1>
+      <p>{count}</p>
     </StyledHighlightsContainer>
   );
 }

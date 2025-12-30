@@ -52,6 +52,10 @@ const StyledSocial = styled.div`
     scale: 1.5;
     padding: 0.7rem;
   }
+
+  a {
+    color: ${theme.text_on_background};
+  }
 `;
 
 const StyledNavLinkWrapper = styled.div`
@@ -105,8 +109,12 @@ export function Footer() {
       </StyledLeftSide>
       <StyledRightSide>
         <StyledSocial>
-          <FaFacebook />
-          <FaGoogle />
+          <NavLink to="https://www.facebook.com/serduszkadwa.biuromatrymonialne/?locale=pl_PL">
+            <FaFacebook />
+          </NavLink>
+          <NavLink to="https://search.google.com/local/writereview?placeid=ChIJNRzA9d0TA0cRZ2J7UHzeIHY">
+            <FaGoogle />
+          </NavLink>
         </StyledSocial>
         <StyledNavLinkWrapper>
           <NavLink to="/">{dictionary.navbar.home_page}</NavLink>
