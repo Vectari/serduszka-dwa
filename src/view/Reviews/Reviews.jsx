@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { theme } from "../../theme";
-import GOOGLE_REVIEW from "../../media/google_reviews.png";
 
 import IMG1 from "../../media/cards/2 - list.jpg";
 import IMG2 from "../../media/cards/4 - list.jpg";
@@ -14,6 +12,8 @@ import IMG7 from "../../media/cards/16 - list.jpg";
 import IMG8 from "../../media/cards/17 - list.jpg";
 import IMG9 from "../../media/cards/18 - list.jpg";
 import IMG10 from "../../media/cards/19 - list.jpg";
+import { GoogleReviewsSummary } from "../../components/GoogleReviewsSummary/GoogleReviewsSummary";
+import { theme } from "../../theme";
 
 const imagePaths = [
   IMG1,
@@ -32,18 +32,9 @@ const ReviewWrapper = styled(NavLink)`
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: ${theme.navbar_text};
-  text-align: center;
-`;
-
-const StyledImg = styled.img`
-  width: 90%;
-  max-width: 400px;
-  height: auto; /* automatyczna wysokość */
-  border-radius: 1rem;
-  object-fit: cover;
-  display: block;
-  margin: 1rem auto; /* centrowanie poziome + mały margines pionowy */
+  color: ${theme.text_on_background};
+  margin: 0 auto;
+  align-items: center;
 `;
 
 const PhotosWrapper = styled.div`
@@ -51,10 +42,6 @@ const PhotosWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 0.5rem;
-
-  /* usuń max-height i overflow */
-  /* max-height: 600px;
-  overflow-y: auto; */
 
   @media (max-width: 765px) {
     grid-template-columns: 1fr;
@@ -146,9 +133,21 @@ export function Reviews() {
   return (
     <>
       <ReviewWrapper to="https://search.google.com/local/writereview?placeid=ChIJNRzA9d0TA0cRZ2J7UHzeIHY">
-        <StyledImg src={GOOGLE_REVIEW} alt="google reviews" />
+        <GoogleReviewsSummary
+          rating={4.9}
+          totalReviews={20}
+          stars={[5, 4, 3, 2, 1]}
+          values={{
+            5: 100,
+            4: 5,
+            3: 0,
+            2: 0,
+            1: 0,
+          }}
+        />
         <h3>Oceń nas w Google!</h3>
       </ReviewWrapper>
+
       <PhotosWrapper>
         {imagePaths.map((img, index) => (
           <PhotoCard key={index} onClick={() => setActiveImage(img)}>
