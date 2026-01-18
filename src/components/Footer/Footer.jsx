@@ -109,10 +109,16 @@ export function Footer() {
       </StyledLeftSide>
       <StyledRightSide>
         <StyledSocial>
-          <NavLink to="https://www.facebook.com/serduszkadwa.biuromatrymonialne/?locale=pl_PL">
+          <NavLink
+            to="https://www.facebook.com/serduszkadwa.biuromatrymonialne/?locale=pl_PL"
+            target="_blank"
+          >
             <FaFacebook />
           </NavLink>
-          <NavLink to="https://search.google.com/local/writereview?placeid=ChIJNRzA9d0TA0cRZ2J7UHzeIHY">
+          <NavLink
+            to="https://search.google.com/local/writereview?placeid=ChIJNRzA9d0TA0cRZ2J7UHzeIHY"
+            target="_blank"
+          >
             <FaGoogle />
           </NavLink>
         </StyledSocial>
@@ -123,7 +129,9 @@ export function Footer() {
           <NavLink to="/reviews">{dictionary.navbar.reviews_page}</NavLink>
           <NavLink to="/contact">{dictionary.navbar.contact_page}</NavLink>
           <NavLink to="/map">{dictionary.navbar.map_page}</NavLink>
-          <p className="creator">Created by Mateusz Majer</p>
+          <NavLink to="https://github.com/Vectari" target="_blank">
+            <p className="creator">Created by Mateusz Majer</p>
+          </NavLink>
         </StyledNavLinkWrapper>
       </StyledRightSide>
     </StyledFooterWrapper>

@@ -132,7 +132,7 @@ export function Reviews() {
 
   return (
     <>
-      <ReviewWrapper to="https://search.google.com/local/writereview?placeid=ChIJNRzA9d0TA0cRZ2J7UHzeIHY">
+      <ReviewWrapper to="https://search.google.com/local/writereview?placeid=ChIJNRzA9d0TA0cRZ2J7UHzeIHY" target="_blank">
         <GoogleReviewsSummary
           rating={4.9}
           totalReviews={20}
