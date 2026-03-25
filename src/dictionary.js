@@ -86,13 +86,13 @@ export const dictionary = {
   price_page: {
     price_page_head: "Opłata za usługi Biura Serduszka Dwa",
     price_page_subscription: "Abonament na 6 miesięcy: ",
-    price_page_subscription_price: "760 zł - 860 zł",
+    price_page_subscription_price: "860 zł",
     price_page_one_offer:
       "Jednorazowa oferta (1 propozycja poznania kandydata):",
-    price_page_one_offer_price: "300 zł",
+    price_page_one_offer_price: "330-360 zł",
     price_page_vip_offer:
       "Oferta VIP (specjalne wymagania-gdy Klientka lub Klient oczekuje zawsze jako pierwszy zapoznać się z ofertą przedstawioną przez Biuro): ",
-    price_page_vip_price: "200 zł",
+    price_page_vip_price: "260 zł",
     price_page_info_head: "Co obejmuje opłata?",
     price_page_info_one:
       "✔ Profesjonalne dobranie kandydatów na podstawie Twojego profilu i oczekiwań",
